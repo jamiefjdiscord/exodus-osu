@@ -43,7 +43,7 @@ int wmain(int argc, wchar_t **argv, wchar_t **envp)
         return 1;
     }
 
-    const wchar_t *dll_name = argc > 2 ? argv[2] : L"freedom.dll";
+    const wchar_t *dll_name = argc > 2 ? argv[2] : L"exodus.dll";
     static wchar_t module_path[MAX_PATH * 2];
     DWORD module_path_length = GetFullPathNameW(dll_name, MAX_PATH * 2, module_path, NULL);
     if (module_path_length == 0)
