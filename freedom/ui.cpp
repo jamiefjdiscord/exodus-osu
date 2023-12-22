@@ -468,7 +468,7 @@ void update_ui()
             ImGui::Text("@ciremun");
             ImGui::Dummy(ImVec2(0.0f, 5.0f));
             ImGui::PushItemWidth(ImGui::CalcTextSize("Ciremun").x + 10.f);
-            ImGui::InputText(" - Discord", (char *)"Ciremun", 8, ImGuiInputTextFlags_ReadOnly);
+            ImGui::InputText(" - Discord", (char *)"coder0079", 8, ImGuiInputTextFlags_ReadOnly);
             ImGui::PopItemWidth();
             ImGui::Dummy(ImVec2(0.0f, 2.5f));
             ImGui::PushItemWidth(ImGui::CalcTextSize("https://discord.gg/cZuQ3W9jD8").x + 10.f);
