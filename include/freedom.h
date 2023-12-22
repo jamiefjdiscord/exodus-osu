@@ -6,7 +6,7 @@
 
 #include <thread>
 
-#define FR_VERSION "undetected"
+#define FR_VERSION "v1"
 
 extern HWND g_hwnd;
 extern HMODULE g_module;
