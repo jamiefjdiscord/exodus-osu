@@ -4,7 +4,7 @@
 #include "ui.h"
 
 ImFont *font = 0;
-char song_name_u8[256] = "Freedom " FR_VERSION " is Loading!";
+char song_name_u8[256] = "exodus " FR_VERSION " is Loading!";
 
 HHOOK oWndProc;
 extern LRESULT ImGui_ImplWin32_WndProcHandler(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
@@ -192,10 +192,10 @@ void update_ui()
 
         update_tab("Difficulty", MenuTab::Difficulty);
 
-        beatmap_onload_offset ? update_tab("Relax",  MenuTab::Relax)  : inactive_tab("Relax");
-        beatmap_onload_offset ? update_tab("Aimbot", MenuTab::Aimbot) : inactive_tab("Aimbot");
+        beatmap_onload_offset ? update_tab("tapping",  MenuTab::Relax)  : inactive_tab("Relax");
+        beatmap_onload_offset ? update_tab("aimassist", MenuTab::Aimbot) : inactive_tab("Aimbot");
         set_playback_rate_code_start ? update_tab("Timewarp", MenuTab::Timewarp) : inactive_tab("Timewarp");
-        selected_replay_offset ? update_tab("Replay", MenuTab::Replay) : inactive_tab("Replay");
+        selected_replay_offset ? update_tab("bot", MenuTab::Replay) : inactive_tab("Replay");
 
         update_tab("Mods", MenuTab::Mods);
         update_tab("Misc", MenuTab::Misc);
@@ -322,13 +322,13 @@ void update_ui()
                 ImGui::SaveIniSettingsToDisk(ImGui::GetIO().IniFilename);
             }
             ImGui::Dummy(ImVec2(.0f, 5.f));
-            if (ImGui::Checkbox("Unmod Hidden", &cfg_hidden_remover_enabled))
+            if (ImGui::Checkbox("Hidden", &cfg_hidden_remover_enabled))
             {
                 cfg_hidden_remover_enabled ? enable_hidden_remover_hooks() : disable_hidden_remover_hooks();
                 ImGui::SaveIniSettingsToDisk(ImGui::GetIO().IniFilename);
             }
             ImGui::Dummy(ImVec2(.0f, 5.f));
-            ImGui::Text("Score Multiplier");
+            ImGui::Text("Multiplier");
             ImGui::Dummy(ImVec2(.0f, 5.f));
             ImGui::PushID(70);
             if (ImGui::Checkbox("Enable", &cfg_score_multiplier_enabled))
@@ -462,17 +462,17 @@ void update_ui()
         }
         if (selected_tab == MenuTab::About)
         {
-            ImGui::Text("Ciremun's Freedom " FR_VERSION);
+            ImGui::Text("coder's exodus" FR_VERSION);
             ImGui::Dummy(ImVec2(0.0f, 5.0f));
-            ImGui::Text("Special Thanks to Maple Syrup");
-            ImGui::Text("@mrflashstudio");
+            ImGui::Text("Special Thanks to ciremun");
+            ImGui::Text("@ciremun");
             ImGui::Dummy(ImVec2(0.0f, 5.0f));
             ImGui::PushItemWidth(ImGui::CalcTextSize("Ciremun").x + 10.f);
             ImGui::InputText(" - Discord", (char *)"Ciremun", 8, ImGuiInputTextFlags_ReadOnly);
             ImGui::PopItemWidth();
             ImGui::Dummy(ImVec2(0.0f, 2.5f));
-            ImGui::PushItemWidth(ImGui::CalcTextSize("https://discord.gg/FyCrwed6jv").x + 10.f);
-            ImGui::InputText(" - Discord Server ", (char *)"https://discord.gg/FyCrwed6jv", 29, ImGuiInputTextFlags_ReadOnly);
+            ImGui::PushItemWidth(ImGui::CalcTextSize("https://discord.gg/cZuQ3W9jD8").x + 10.f);
+            ImGui::InputText(" - Discord Server ", (char *)"https://discord.gg/cZuQ3W9jD8", 29, ImGuiInputTextFlags_ReadOnly);
             ImGui::PopItemWidth();
         }
         if (selected_tab == MenuTab::Debug)
