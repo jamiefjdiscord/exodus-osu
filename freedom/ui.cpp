@@ -192,10 +192,10 @@ void update_ui()
 
         update_tab("Difficulty", MenuTab::Difficulty);
 
-        beatmap_onload_offset ? update_tab("tapping",  MenuTab::Relax)  : inactive_tab("Relax");
-        beatmap_onload_offset ? update_tab("aimassist", MenuTab::Aimbot) : inactive_tab("Aimbot");
+        beatmap_onload_offset ? update_tab("Relax",  MenuTab::Relax)  : inactive_tab("Relax");
+        beatmap_onload_offset ? update_tab("Aimassist", MenuTab::Aimbot) : inactive_tab("Aimbot");
         set_playback_rate_code_start ? update_tab("Timewarp", MenuTab::Timewarp) : inactive_tab("Timewarp");
-        selected_replay_offset ? update_tab("bot", MenuTab::Replay) : inactive_tab("Replay");
+        selected_replay_offset ? update_tab("Replay's", MenuTab::Replay) : inactive_tab("Replay");
 
         update_tab("Mods", MenuTab::Mods);
         update_tab("Misc", MenuTab::Misc);
@@ -464,11 +464,11 @@ void update_ui()
         {
             ImGui::Text("coder's exodus" FR_VERSION);
             ImGui::Dummy(ImVec2(0.0f, 5.0f));
-            ImGui::Text("Special Thanks to ciremun");
-            ImGui::Text("@ciremun");
+            ImGui::Text("made with love");
+            ImGui::Text("@coder89");
             ImGui::Dummy(ImVec2(0.0f, 5.0f));
-            ImGui::PushItemWidth(ImGui::CalcTextSize("Ciremun").x + 10.f);
-            ImGui::InputText(" - Discord", (char *)"coder0079", 8, ImGuiInputTextFlags_ReadOnly);
+            ImGui::PushItemWidth(ImGui::CalcTextSize("coder89").x + 10.f);
+            ImGui::InputText(" - Discord", (char *)"coder89", 8, ImGuiInputTextFlags_ReadOnly);
             ImGui::PopItemWidth();
             ImGui::Dummy(ImVec2(0.0f, 2.5f));
             ImGui::PushItemWidth(ImGui::CalcTextSize("https://discord.gg/cZuQ3W9jD8").x + 10.f);
