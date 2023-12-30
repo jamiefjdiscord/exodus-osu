@@ -193,9 +193,9 @@ void update_ui()
         update_tab("Difficulty", MenuTab::Difficulty);
 
         beatmap_onload_offset ? update_tab("Relax",  MenuTab::Relax)  : inactive_tab("Relax");
-        beatmap_onload_offset ? update_tab("Aimassist", MenuTab::Aimbot) : inactive_tab("Aimbot");
+        beatmap_onload_offset ? update_tab("Aimbot", MenuTab::Aimbot) : inactive_tab("Aimbot");
         set_playback_rate_code_start ? update_tab("Timewarp", MenuTab::Timewarp) : inactive_tab("Timewarp");
-        selected_replay_offset ? update_tab("Replay's", MenuTab::Replay) : inactive_tab("Replay");
+        selected_replay_offset ? update_tab("Replay", MenuTab::Replay) : inactive_tab("Replay");
 
         update_tab("Mods", MenuTab::Mods);
         update_tab("Misc", MenuTab::Misc);
