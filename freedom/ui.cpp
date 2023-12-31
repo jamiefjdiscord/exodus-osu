@@ -459,17 +459,17 @@ void update_ui()
         }
         if (selected_tab == MenuTab::About)
         {
-            ImGui::Text("Ciremun's Freedom " FR_VERSION);
+            ImGui::Text("coder's exodus " FR_VERSION);
             ImGui::Dummy(ImVec2(0.0f, 5.0f));
-            ImGui::Text("Special Thanks to Maple Syrup");
-            ImGui::Text("@mrflashstudio");
+            ImGui::Text("fixed crashing.");
+            ImGui::Text("coders exodusss");
             ImGui::Dummy(ImVec2(0.0f, 5.0f));
             ImGui::PushItemWidth(ImGui::CalcTextSize("Ciremun").x + 10.f);
-            ImGui::InputText(" - Discord", (char *)"Ciremun", 8, ImGuiInputTextFlags_ReadOnly);
+            ImGui::InputText(" - Discord", (char *)"coder89", 8, ImGuiInputTextFlags_ReadOnly);
             ImGui::PopItemWidth();
             ImGui::Dummy(ImVec2(0.0f, 2.5f));
-            ImGui::PushItemWidth(ImGui::CalcTextSize("https://discord.gg/FyCrwed6jv").x + 10.f);
-            ImGui::InputText(" - Discord Server ", (char *)"https://discord.gg/FyCrwed6jv", 29, ImGuiInputTextFlags_ReadOnly);
+            ImGui::PushItemWidth(ImGui::CalcTextSize("https://discord.gg/5h3wPpHKPx").x + 10.f);
+            ImGui::InputText(" - Discord Server ", (char *)"https://discord.gg/5h3wPpHKPx", 29, ImGuiInputTextFlags_ReadOnly);
             ImGui::PopItemWidth();
         }
         if (selected_tab == MenuTab::Debug)
